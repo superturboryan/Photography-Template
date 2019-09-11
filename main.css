@@ -1,0 +1,89 @@
+body {
+   
+}
+
+/* HIDE SCROLLBAR */
+body::-webkit-scrollbar {
+   width: 0px; /* Remove scrollbar space */
+   height: 0px;
+   background: transparent; /* Optional: just make scrollbar invisible */
+ }
+
+nav {
+   position: fixed;
+   top: 0;
+   display: flex;
+   justify-content: space-between;
+   height: 50px;
+   width: 100vw;
+   padding: 0 10px;
+   /* background-color: rgba(235,235,235,1); */
+   background-color: transparent;
+   box-sizing: border-box;
+}
+
+#nav-title {
+   margin-top: 10px;
+   font-family: GrotesqueBold, Arial, Helvetica, sans-serif;
+   font-size: 18pt;
+   letter-spacing: 10px;
+}
+
+nav ul {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   width: 200px;
+   height: 50%;
+   margin-top: 10px;
+   padding: 0;
+   font-family: GrotesqueLight, Arial, Helvetica, sans-serif;
+   font-size: 9pt;
+   /* letter-spacing: -0.5px; */
+}
+
+.left-align {
+   text-align: left;
+}
+
+.right-align {
+   text-align: right;
+}
+
+nav ul li {
+   padding-top: 3px;
+}
+
+#title {
+   margin: 50px auto 100px auto;
+   font-family: GrotesqueBold, Arial, sans-serif;
+   font-size: 330px;
+   letter-spacing: -10px;
+   width: 1000px;
+   
+}
+
+#title-suffix{
+   display: inline;
+   margin-left:-35px
+}
+
+#suffix-suffix{
+   display: inline;
+   margin: 0 -100px 0 -90px;
+}
+
+@font-face {
+   font-family: "GrotesqueBold";
+   src: url("file:///Users/ryan/WebDev%20Workspace/cmf-website/fonts/SpaceGrotesk-Bold.otf") format("opentype")
+}
+
+@font-face {
+   font-family: "GrotesqueLight";
+   src: url("file:///Users/ryan/WebDev%20Workspace/cmf-website/fonts/SpaceGrotesk-Light.otf") format("opentype")
+}
+
+@font-face {
+   font-family: "GrotesqueReg";
+   src: url("file:///Users/ryan/WebDev%20Workspace/cmf-website/fonts/SpaceGrotesk-Regular.otf") format("opentype")
+}
