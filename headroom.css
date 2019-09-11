@@ -1,0 +1,9 @@
+.headroom--pinned {
+   opacity: 1;
+   transition: all 0.3s ease-in-out;
+}
+.headroom--unpinned {
+   
+   transition: all 0.3s ease-in-out;
+   opacity: 0;
+}
