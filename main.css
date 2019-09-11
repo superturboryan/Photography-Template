@@ -174,6 +174,14 @@ footer h3 a:hover {
       font-size: 30pt;
    }
 
+   #title {
+      left: 180px;
+   }
+
+   #title-outline {
+      left: 180px;
+   }
+
    img:first-of-type{
       margin-top: 700px;
    }
