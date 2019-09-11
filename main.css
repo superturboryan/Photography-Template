@@ -55,12 +55,29 @@ nav ul li {
 }
 
 #title {
-   margin: 50px auto 100px auto;
+   position: fixed;
+   top:10%;
+   left: 250px;
    font-family: GrotesqueBold, Arial, sans-serif;
    font-size: 330px;
    letter-spacing: -10px;
    width: 1000px;
-   
+   z-index:-1;
+}
+
+#title-outline{
+   position: fixed;
+   top:10%;
+   left: 250px;
+   font-family: GrotesqueBold, Arial, sans-serif;
+   font-size: 330px;
+   letter-spacing: -10px;
+   width: 1000px;
+   z-index:1;
+   color: black;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 }
 
 #title-suffix{
@@ -73,6 +90,21 @@ nav ul li {
    margin: 0 -100px 0 -90px;
 }
 
+img {
+   display: block;
+   width: 1400px;
+   height: 933px;
+   margin: 50px auto;
+   border-radius: 5px;
+}
+
+img:first-of-type{
+   
+   margin-top: 500px;
+}
+
+
+/* CUSTOM FONTS */
 @font-face {
    font-family: "GrotesqueBold";
    src: url("file:///Users/ryan/WebDev%20Workspace/cmf-website/fonts/SpaceGrotesk-Bold.otf") format("opentype")
