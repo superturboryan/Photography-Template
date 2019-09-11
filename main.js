@@ -15,10 +15,10 @@ var navHeadroom = new Headroom(navBar, navOptions);
 navHeadroom.init();
 
 /////////////////////
-// APPLY CSS ONSCROLL
+// DO THINGS WHEN PAGE OFFSET IS...
 window.onscroll = function () {
    var title = document.getElementById('title');
-   if (window.pageYOffset > 326) {
+   if (window.pageYOffset > 346) {
       title.classList.add("opacity-zero");
    } else {
       title.classList.remove("opacity-zero");

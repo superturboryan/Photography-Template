@@ -34,11 +34,11 @@ nav ul {
    flex-direction: column;
    justify-content: space-around;
    width: 200px;
-   height: 50%;
+   height: 60%;
    margin-top: 10px;
    padding: 0;
    font-family: GrotesqueLight, Arial, Helvetica, sans-serif;
-   font-size: 9pt;
+   font-size: 9.5pt;
    /* letter-spacing: -0.5px; */
 }
 
@@ -85,7 +85,7 @@ nav ul li a:hover {
    z-index:1;
    color: black;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: white;
 }
 
@@ -103,13 +103,23 @@ img {
    display: block;
    width: 1400px;
    height: 933px;
-   margin: 50px auto;
+   margin: 20px auto;
    border-radius: 5px;
    transition: all 0.5s ease-in-out 0.2s;
 }
 
 img:first-of-type{
-   margin-top: 500px;
+   margin-top: 520px;
+}
+
+.caption {
+   font-family: GrotesqueLight, Arial, Helvetica, sans-serif;
+   font-size: 9.5pt;
+   width: 100px;
+   height: 10px;
+   margin: 0 auto 100px auto;
+   text-align: center;
+   z-index:1000;
 }
 
 footer{
