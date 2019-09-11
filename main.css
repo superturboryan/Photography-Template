@@ -36,7 +36,7 @@ nav ul {
    width: 200px;
    height: 60%;
    margin-top: 10px;
-   padding: 0;
+   padding: 0 12px;
    font-family: GrotesqueLight, Arial, Helvetica, sans-serif;
    font-size: 9.5pt;
    /* letter-spacing: -0.5px; */
@@ -133,8 +133,10 @@ footer{
 }
 
 footer h3{
+   display: block;
    margin: 10px auto 0 auto;
-   width: 300px;
+   width: 100%;
+   text-align: center;
    font-family: GrotesqueLight, Arial, Helvetica, sans-serif;
    font-size: 12pt;
    background-color: transparent;
@@ -150,6 +152,37 @@ footer h3 a:hover {
    color: rgba(50,50,50,1);
    transition: 0.3s ease-in-out;
 }
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 580px) {
+   nav{
+      width:100%;
+      height: 150px;
+   }
+
+   nav ul {
+      width: 600px;
+   }
+
+   #nav-title {
+      font-size: 34pt;
+   }
+
+   nav ul li{
+      font-size: 30pt;
+   }
+
+   img:first-of-type{
+      margin-top: 700px;
+   }
+
+}
+
+
+
+
 
 /* CUSTOM FONTS */
 @font-face {
