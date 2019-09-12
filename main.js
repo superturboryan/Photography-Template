@@ -64,15 +64,22 @@ const revealDetailsView = () => {
    hideHomepage()
    lockScrolling()
 
+   window.scrollTo(0, 0)
+
    const detailView = document.querySelector(".detail-view")
-   detailView.classList.add("left-zero")
-   console.log("Details view sliding in!")
+
+   setTimeout(() => {
+      detailView.classList.add("left-zero")
+      console.log("Details view sliding in!")
+   }, 600)
+
 }
 
 const hideDetailView = () => {
    const detailView = document.querySelector(".detail-view")
    detailView.classList.remove("left-zero")
    console.log("Detail view hidden!")
+   unlockScrolling()
    showHomepage()
 }
 

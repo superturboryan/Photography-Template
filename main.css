@@ -1,6 +1,8 @@
 body {
    background-color: rgb(252, 252, 252);
-   color: rgb(10,10,10)
+   color: rgb(10,10,10);
+   font-family: GrotesqueLight;
+   text-align: center;
 }
 
 main {
@@ -234,15 +236,6 @@ footer h3 a:hover {
    left: 0;
 }
 
-.close-button {
-   position: absolute;
-   top: 20px;
-   left: 20px;
-   font-family: GrotesqueBold;
-   font-size: 60px;
-   background: transparent;
-   box-shadow: transparent;
-}
 
 .hidden {
    right: 100vw;
@@ -253,6 +246,11 @@ footer h3 a:hover {
    overflow: hidden;
 }
 
+#details-title {
+width: 500px;
+margin: 200px auto 0 auto;
+font-size: 60px;
+}
 
 
 
@@ -261,8 +259,77 @@ footer h3 a:hover {
 
 
 
+/* CLOSE BUTTON */
 
+.outer {
+   position: relative;
+   margin: auto;
+   width: 70px;
+   cursor: pointer;
+ }
+ 
+ .inner {
+   width: inherit;
+   text-align: center;
+ }
+ 
+ .close-button {
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   
+}
 
+ .close-label { 
+   font-family: GrotesqueBold;
+   font-size: 30px;
+   line-height: 2em;
+   text-transform: uppercase;
+   color: #fff;
+   transition: all .3s ease-in;
+   opacity: 0;
+   cursor: pointer;
+
+ }
+ 
+ .inner:before, .inner:after {
+   position: absolute;
+   content: '';
+   height: 1px;
+   width: inherit;
+   background: rgb(10,10,10);
+   left: 0;
+   transition: all .3s ease-in;
+ }
+ 
+ .inner:before {
+   top: 50%; 
+   transform: rotate(45deg);  
+ }
+ 
+ .inner:after {  
+   bottom: 50%;
+   transform: rotate(-45deg);  
+ }
+ 
+ .outer:hover label {
+   opacity: 1;
+ }
+ 
+ .outer:hover .inner:before,
+ .outer:hover .inner:after {
+   transform: rotate(0);
+   background: red;
+ }
+ 
+ .outer:hover .inner:before {
+   top: 0;
+ }
+ 
+ .outer:hover .inner:after {
+   bottom: 0;
+   
+ }
 
 
 

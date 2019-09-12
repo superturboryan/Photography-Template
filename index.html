@@ -76,9 +76,14 @@
 
    <div class="detail-view">
 
-      <button class="close-button" onclick="hideDetailView()"> X </button>
+      <div class="outer close-button">
+         <div class="inner">
+            <label onclick="hideDetailView()" class="close-label">Back</label>
+         </div>
+      </div>
 
-      <h2>Details view</h2>
+      <h2 id="details-title">Details view</h2>
+
    </div>
 
    <footer>
