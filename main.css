@@ -133,7 +133,7 @@ img {
    cursor: url(file:///Users/ryan/WebDev%20Workspace/cmf-website/assets/camera-icon.png) 15 15, pointer;
 }
 
-img:first-of-type{
+.first-img{
    margin-top: 520px;
 }
 
@@ -221,9 +221,9 @@ footer h3 a:hover {
    height: 100vh;
    width: 100vw;
    position: absolute;
-   top: 0;
+   top: 50px;
    left: 100vw;
-   background-color: gray;
+   background-color: transparent;
    transition: 0.5s ease-in-out;
    z-index: 1001;
 }
@@ -231,7 +231,7 @@ footer h3 a:hover {
 .left-zero {
    height: 100vh;
    width: 100vw;
-   top: 0;
+   top: 50px;
    transition: 0.5s ease-in-out;
    left: 0;
 }
@@ -240,20 +240,49 @@ footer h3 a:hover {
 .hidden {
    right: 100vw;
    opacity: 0;
+   transition: 0.7s ease-in-out;
 }
 
 .overflow-hidden {
    overflow: hidden;
 }
 
-#details-title {
-width: 500px;
-margin: 200px auto 0 auto;
+.details-title {
+width: 1000px;
+margin: 50px auto 0 auto;
 font-size: 60px;
 }
 
+.details-subtitle {
+   width: 800px;
+   font-size: 30px;
+   margin: 50px auto;
+}
 
+.detail-img-container {
+   height: 60vh;
+   width: auto;
+   display:flex;
+   overflow-x: scroll;
+}
 
+.detail-img-container::-webkit-scrollbar {
+   width: 0px; /* Remove scrollbar space */
+   height: 0px;
+   background: transparent; /* Optional: just make scrollbar invisible */
+ }
+
+.detail-img {
+   height:100%;
+   width: auto;
+}
+
+.img-divider {
+   width: 20px;
+   height: 100%;
+   display: block;
+   visibility: hidden;
+}
 
 
 
@@ -275,17 +304,17 @@ font-size: 60px;
  
  .close-button {
    position: absolute;
-   top: 20px;
+   top: 120px;
    left: 20px;
    
 }
 
  .close-label { 
-   font-family: GrotesqueBold;
-   font-size: 30px;
+   font-family: GrotesqueLight;
+   font-size: 20px;
    line-height: 2em;
    text-transform: uppercase;
-   color: #fff;
+   color: rgb(10,10,10);
    transition: all .3s ease-in;
    opacity: 0;
    cursor: pointer;
