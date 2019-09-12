@@ -365,15 +365,15 @@ font-size: 60px;
 /* CUSTOM FONTS */
 @font-face {
    font-family: "GrotesqueBold";
-   src: url("file:///Users/ryan/WebDev%20Workspace/cmf-website/fonts/SpaceGrotesk-Bold.otf") format("opentype")
+   src: url("https://www.ryanforsyth.dev/cmf-website/fonts/SpaceGrotesk-Bold.otf") format("opentype")
 }
 
 @font-face {
    font-family: "GrotesqueLight";
-   src: url("file:///Users/ryan/WebDev%20Workspace/cmf-website/fonts/SpaceGrotesk-Light.otf") format("opentype")
+   src: url("https://www.ryanforsyth.dev/cmf-website/fonts/SpaceGrotesk-Light.otf") format("opentype")
 }
 
 @font-face {
    font-family: "GrotesqueReg";
-   src: url("file:///Users/ryan/WebDev%20Workspace/cmf-website/fonts/SpaceGrotesk-Regular.otf") format("opentype")
+   src: url("https://www.ryanforsyth.dev/cmf-website/fonts/SpaceGrotesk-Regular.otf") format("opentype")
 }
