@@ -59,6 +59,45 @@ window.onscroll = function () {
    this.console.log(window.pageYOffset)
 }
 
+const revealDetailsView = () => {
+
+   hideHomepage()
+   lockScrolling()
+
+   const detailView = document.querySelector(".detail-view")
+   detailView.classList.add("left-zero")
+   console.log("Details view sliding in!")
+}
+
+const hideDetailView = () => {
+   const detailView = document.querySelector(".detail-view")
+   detailView.classList.remove("left-zero")
+   console.log("Detail view hidden!")
+   showHomepage()
+}
+
+const hideHomepage = () => {
+   let homepage = document.getElementById("homepage")
+   homepage.classList.add('hidden')
+   console.log("Homepage hidden!")
+}
+
+const showHomepage = () => {
+   let homepage = document.getElementById("homepage")
+   homepage.classList.remove('hidden')
+   console.log("Showing homepage!")
+}
+
+const lockScrolling = () => {
+   const body = document.getElementById('body')
+   body.classList.add("overflow-hidden")
+}
+
+const unlockScrolling = () => {
+   const body = document.getElementById('body')
+   body.classList.remove("overflow-hidden")
+}
+
 // ScrollReveal({ reset: true })
 // ScrollReveal().reveal('img', { delay: 0, duration: 300, easing: 'ease-in-out', reset: true })
 ScrollReveal().reveal('footer', { delay: 400, duration: 1000, easing: 'ease-in-out', reset: true })

@@ -3,6 +3,10 @@ body {
    color: rgb(10,10,10)
 }
 
+main {
+   position: relative;
+}
+
 /* HIDE SCROLLBAR */
 body::-webkit-scrollbar {
    width: 0px; /* Remove scrollbar space */
@@ -21,6 +25,7 @@ nav {
    /* background-color: rgba(235,235,235,1); */
    background-color: transparent;
    box-sizing: border-box;
+   z-index:-1;
 }
 
 #nav-title {
@@ -43,6 +48,10 @@ nav ul {
    font-family: GrotesqueLight, Arial, Helvetica, sans-serif;
    font-size: 9.5pt;
    /* letter-spacing: -0.5px; */
+}
+
+main {
+   transition: 0.5s ease-in-out;
 }
 
 .left-align {
@@ -202,6 +211,56 @@ footer h3 a:hover {
    }
 
 }
+
+
+/* DETAIL VIEW  */
+
+.detail-view {
+   height: 100vh;
+   width: 100vw;
+   position: absolute;
+   top: 0;
+   left: 100vw;
+   background-color: gray;
+   transition: 0.5s ease-in-out;
+   z-index: 1001;
+}
+
+.left-zero {
+   height: 100vh;
+   width: 100vw;
+   top: 0;
+   transition: 0.5s ease-in-out;
+   left: 0;
+}
+
+.close-button {
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   font-family: GrotesqueBold;
+   font-size: 60px;
+   background: transparent;
+   box-shadow: transparent;
+}
+
+.hidden {
+   right: 100vw;
+   opacity: 0;
+}
+
+.overflow-hidden {
+   overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
 
 
 
