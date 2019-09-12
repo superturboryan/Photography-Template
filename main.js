@@ -11,10 +11,24 @@ const navOptions = {
 }
 
 var navHeadroom = new Headroom(navBar, navOptions);
-// initialise
+// initialize
 // navHeadroom.init();
 
-/////////////////////
+
+///////////////////////////////////
+// DO THINGS WHEN PAGE IS LOADED...
+window.onload = function () {
+
+   var title = document.getElementById('title');
+
+   if (window.pageYOffset > 500) {
+      //HIDE THE TITLE WHEN PAGE LOADS IF ALREADY SCROLLED DOWN
+      title.classList.add("opacity-zero");
+   }
+}
+
+
+///////////////////////////////////
 // DO THINGS WHEN PAGE OFFSET IS...
 window.onscroll = function () {
 
@@ -45,6 +59,7 @@ window.onscroll = function () {
    this.console.log(window.pageYOffset)
 }
 
+// ScrollReveal({ reset: true })
+// ScrollReveal().reveal('img', { delay: 0, duration: 300, easing: 'ease-in-out', reset: true })
+ScrollReveal().reveal('footer', { delay: 400, duration: 1000, easing: 'ease-in-out', reset: true })
 
-
-// top 403
