@@ -121,6 +121,9 @@ const setNavbarTitle = imgNumber => {
    if (imgNumber == 1) {
       navbarTitle.innerHTML = "Keeping Direction by Good Method"
    }
+   else if (imgNumber == 2) {
+      navbarTitle.innerHTML = "The Montreal Metro Project"
+   }
 
    navbarTitle.classList.remove("white-text")
    navbarTitle.classList.remove("opacity-zero")
@@ -130,6 +133,7 @@ const setNavbarTitle = imgNumber => {
 const clearNavbarTitle = () => {
    let navbarTitle = document.querySelector(".nav-title")
    navbarTitle.classList.remove("black-text")
+   navbarTitle.innerHTML = "..."
 }
 
 const hideDetailView = (hiddenImg) => {
