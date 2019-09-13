@@ -48,13 +48,13 @@ window.onscroll = function () {
       titleOutline.classList.remove('camera-cursor');
    }
 
-   let navTitle = document.getElementById('nav-title')
+   let navTitle = document.querySelector('.nav-title')
 
-   if (window.pageYOffset < 466) {
-      navTitle.classList.add('opacity-zero')
-      // console.log("Hiding nav title above first img")
-   }
-   else if (window.pageYOffset > 466 && window.pageYOffset < 1362) {
+   // if (window.pageYOffset < 466) {
+   //    navTitle.classList.add('opacity-zero')
+   //    // console.log("Hiding nav title above first img")
+   // }
+   if (window.pageYOffset > 466 && window.pageYOffset < 1362) {
       navTitle.classList.remove('opacity-zero')
       navTitle.innerHTML = "Keeping Direction by Good Method"
       // console.log("Showing Keeping Direction by Good Method")
@@ -69,10 +69,10 @@ window.onscroll = function () {
       navTitle.innerHTML = "The Montreal Metro Project"
       // console.log("Showing The Montreal Metro Project")
    }
-   else {
-      navTitle.classList.add('opacity-zero')
-      // console.log("Hiding nav title")
-   }
+   // else {
+   //    navTitle.classList.add('opacity-zero')
+   //    // console.log("Hiding nav title")
+   // }
 
    console.log("Y: " + window.pageYOffset)
 
@@ -91,7 +91,7 @@ imgContainer.addEventListener('scroll', (e) => {
    let imgOverlay = document.querySelector(".img-overlay")
 
    // if (i % 2 == 0) 
-   imgOverlay.style.left = (offsetX * 1.5) + 300 + "px";
+   imgOverlay.style.left = (offsetX * 1.7) + 340 + "px";
 
    i++
 }, true)
@@ -100,6 +100,7 @@ const revealDetailsView = (imgNumber) => {
 
    hideHomepage(imgNumber)
    lockScrolling()
+   setNavbarTitle(imgNumber)
 
    setTimeout(() => {
       window.scrollTo(0, 0)
@@ -114,7 +115,22 @@ const revealDetailsView = (imgNumber) => {
 
 }
 
-// SCROLL EFFECT REVEAL COLLECTION TITLE IN NAV DO IT !!!
+const setNavbarTitle = imgNumber => {
+   let navbarTitle = document.querySelector(".nav-title")
+
+   if (imgNumber == 1) {
+      navbarTitle.innerHTML = "Keeping Direction by Good Method"
+   }
+
+   navbarTitle.classList.remove("white-text")
+   navbarTitle.classList.remove("opacity-zero")
+   navbarTitle.classList.add("black-text")
+}
+
+const clearNavbarTitle = () => {
+   let navbarTitle = document.querySelector(".nav-title")
+   navbarTitle.classList.remove("black-text")
+}
 
 const hideDetailView = (hiddenImg) => {
    const detailView = document.querySelector(".detail-view")
@@ -150,6 +166,8 @@ const showHomepage = (hiddenImg) => {
    console.log(hiddenImg)
    let img = document.getElementById(`img${hiddenImg}`)
    img.classList.remove('hidden')
+
+   clearNavbarTitle()
 
    console.log("Showing homepage!")
 }
