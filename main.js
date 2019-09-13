@@ -50,10 +50,28 @@ window.onscroll = function () {
 
    var navTitle = document.getElementById('nav-title')
 
-   if (window.pageYOffset > 489) {
-      navTitle.classList.add("opacity-zero");
-   } else {
-      navTitle.classList.remove("opacity-zero");
+   if (window.pageYOffset < 466) {
+      navTitle.classList.add('opacity-zero')
+      console.log("Hiding nav title above first img")
+   }
+   else if (window.pageYOffset > 466 && window.pageYOffset < 1362) {
+      navTitle.classList.remove('opacity-zero')
+      navTitle.innerHTML = "Keeping Direction by Good Method"
+      console.log("Showing Keeping Direction by Good Method")
+   }
+   else if (window.pageYOffset > 1362 && window.pageYOffset < 1472) {
+      navTitle.classList.add('opacity-zero')
+      navTitle.innerHTML = "..."
+      console.log("Hiding nav title")
+   }
+   else if (window.pageYOffset > 1472 && window.pageYOffset < 2211) {
+      navTitle.classList.remove('opacity-zero')
+      navTitle.innerHTML = "The Montreal Metro Project"
+      console.log("Showing The Montreal Metro Project")
+   }
+   else {
+      navTitle.classList.add('opacity-zero')
+      console.log("Hiding nav title")
    }
 
    this.console.log(window.pageYOffset)
@@ -69,15 +87,17 @@ const revealDetailsView = () => {
    const detailView = document.querySelector(".detail-view")
 
    setTimeout(() => {
-      detailView.classList.add("left-zero")
+      detailView.classList.add("fade-in-up")
       console.log("Details view sliding in!")
    }, 700)
 
 }
 
+// SCROLL EFFECT REVEAL COLLECTION TITLE IN NAV DO IT !!!
+
 const hideDetailView = () => {
    const detailView = document.querySelector(".detail-view")
-   detailView.classList.remove("left-zero")
+   detailView.classList.remove("fade-in-up")
    console.log("Detail view hidden!")
 
    setTimeout(() => {
@@ -87,14 +107,35 @@ const hideDetailView = () => {
 }
 
 const hideHomepage = () => {
-   let homepage = document.getElementById("homepage")
-   homepage.classList.add('hidden')
-   console.log("Homepage hidden!")
+   let title = document.getElementById('title')
+   title.classList.add('hidden')
+
+   let img1 = document.getElementById("img1")
+   let img2 = document.getElementById("img2")
+   let img3 = document.getElementById("img3")
+   let img4 = document.getElementById("img4")
+   setTimeout(() => {
+      img1.classList.add('hidden')
+      img2.classList.add('hidden')
+      img3.classList.add('hidden')
+      img4.classList.add('hidden')
+      console.log("Homepage hidden!")
+   }, 300)
+
 }
 
 const showHomepage = () => {
-   let homepage = document.getElementById("homepage")
-   homepage.classList.remove('hidden')
+   let title = document.getElementById('title')
+   title.classList.remove('hidden')
+   let img1 = document.getElementById("img1")
+   let img2 = document.getElementById("img2")
+   let img3 = document.getElementById("img3")
+   let img4 = document.getElementById("img4")
+   img1.classList.remove('hidden')
+   img2.classList.remove('hidden')
+   img3.classList.remove('hidden')
+   img4.classList.remove('hidden')
+
    console.log("Showing homepage!")
 }
 

@@ -7,6 +7,7 @@ body {
 
 main {
    position: relative;
+   transition: all 0.3s ease-in-out;
 }
 
 /* HIDE SCROLLBAR */
@@ -27,15 +28,15 @@ nav {
    /* background-color: rgba(235,235,235,1); */
    background-color: transparent;
    box-sizing: border-box;
-   z-index:-1;
+   z-index:1002;
 }
 
 #nav-title {
-   margin-top: 10px;
-   font-family: GrotesqueBold, Arial, Helvetica, sans-serif;
-   font-size: 18pt;
-   letter-spacing: 10px;
-   opacity: 0;
+   margin-top: 22px;
+   font-family: GrotesqueLight, Arial, Helvetica, sans-serif;
+   font-size: 9.5pt;
+   color: white;
+   /* letter-spacing: 10px; */
    /* transition: all 0.2s ease-in-out; */
 }
 
@@ -84,7 +85,7 @@ nav ul li a img {
 #title {
    position: fixed;
    top:10%;
-   left: 250px;
+   left: 220px;
    font-family: GrotesqueBold, Arial, sans-serif;
    font-size: 330px;
    letter-spacing: -10px;
@@ -96,7 +97,7 @@ nav ul li a img {
 #title-outline{
    position: fixed;
    top:10%;
-   left: 250px;
+   left: 220px;
    font-family: GrotesqueBold, Arial, sans-serif;
    font-size: 330px;
    letter-spacing: -10px;
@@ -125,6 +126,7 @@ nav ul li a img {
 }
 
 img {
+   transition: all 0.3s ease-in-out;
    display: block;
    width: 75vw;
    margin: 20px auto;
@@ -137,15 +139,24 @@ img {
    margin-top: 520px;
 }
 
+.last-img {
+   margin-bottom: 200px;
+}
+
 .caption {
    font-family: GrotesqueLight, Arial, Helvetica, sans-serif;
    font-size: 9.5pt;
-   width: 100px;
+   width: 250px;
    height: 10px;
    margin: 0 auto 100px auto;
    text-align: center;
    z-index:1000;
    position: relative;
+   opacity: 0;
+}
+
+.first-caption{
+   margin-top: 520px;
 }
 
 footer{
@@ -156,6 +167,14 @@ footer{
 
 .opacity-zero {
    opacity: 0;
+}
+
+.opacity-one {
+   opacity: 1;
+}
+
+.white-text {
+   color: white;
 }
 
 footer h3{
@@ -221,11 +240,12 @@ footer h3 a:hover {
    height: 100vh;
    width: 100vw;
    position: absolute;
-   top: 50px;
-   left: 100vw;
+   top: 150px;
+   left: 0;
    background-color: transparent;
    transition: 0.5s ease-in-out;
-   z-index: 1001;
+   z-index: -1;
+   opacity: 0;
 }
 
 .left-zero {
@@ -236,6 +256,11 @@ footer h3 a:hover {
    left: 0;
 }
 
+.fade-in-up {
+   top: 50px;
+   opacity: 1;
+   z-index: 1001;
+}
 
 .hidden {
    right: 100vw;
@@ -256,7 +281,7 @@ font-size: 60px;
 .details-subtitle {
    width: 800px;
    font-size: 30px;
-   margin: 50px auto;
+   margin: 30px auto 10px auto;
 }
 
 .detail-img-container {
@@ -264,6 +289,7 @@ font-size: 60px;
    width: auto;
    display:flex;
    overflow-x: scroll;
+   margin: 10px 0 0 0;
 }
 
 .detail-img-container::-webkit-scrollbar {
@@ -365,15 +391,15 @@ font-size: 60px;
 /* CUSTOM FONTS */
 @font-face {
    font-family: "GrotesqueBold";
-   src: url("https://www.ryanforsyth.dev/cmf-website/fonts/SpaceGrotesk-Bold.otf") format("opentype")
+   src: url("file:///Users/ryan/webDev%20Workspace/cmf-website/fonts/SpaceGrotesk-Bold.otf") format("opentype")
 }
 
 @font-face {
    font-family: "GrotesqueLight";
-   src: url("https://www.ryanforsyth.dev/cmf-website/fonts/SpaceGrotesk-Light.otf") format("opentype")
+   src: url("file:///Users/ryan/webDev%20Workspace/cmf-website/fonts/SpaceGrotesk-Light.otf") format("opentype")
 }
 
 @font-face {
    font-family: "GrotesqueReg";
-   src: url("https://www.ryanforsyth.dev/cmf-website/fonts/SpaceGrotesk-Regular.otf") format("opentype")
+   src: url("file:///Users/ryan/webDev%20Workspace/cmf-website/fonts/SpaceGrotesk-Regular.otf") format("opentype")
 }
