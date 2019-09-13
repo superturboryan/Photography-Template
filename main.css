@@ -91,7 +91,7 @@ nav ul li a img {
    letter-spacing: -10px;
    width: 1000px;
    z-index:-1;
-   /* transition: all 0.3s ease-in-out; */
+   transition: all 0.3s ease-in-out;
 }
 
 #title-outline{
@@ -140,7 +140,7 @@ img {
 }
 
 .last-img {
-   margin-bottom: 200px;
+   margin-bottom: 50px;
 }
 
 .caption {
@@ -242,7 +242,7 @@ footer h3 a:hover {
    position: absolute;
    top: 150px;
    left: 0;
-   background-color: transparent;
+   background-color: rgb(252, 252, 252);
    transition: 0.5s ease-in-out;
    z-index: -1;
    opacity: 0;
@@ -263,9 +263,9 @@ footer h3 a:hover {
 }
 
 .hidden {
-   right: 100vw;
+   
    opacity: 0;
-   transition: 0.7s ease-in-out;
+   transition: 0.6s ease-in-out;
 }
 
 .overflow-hidden {
@@ -289,7 +289,7 @@ font-size: 60px;
    width: auto;
    display:flex;
    overflow-x: scroll;
-   margin: 10px 0 0 0;
+   margin: 10px 20px 0 20px;
 }
 
 .detail-img-container::-webkit-scrollbar {
@@ -310,8 +310,31 @@ font-size: 60px;
    visibility: hidden;
 }
 
+.img-overlay {
+   transition: ease;
+   position: fixed;
+   top:45%;
+   left: 400px;
+   font-family: GrotesqueBold, Arial, sans-serif;
+   font-size: 50px;
+   /* letter-spacing: -5px; */
+   width: 200px;
+   z-index:1;
+   color: white;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: white;
+}
 
+.img-suffix {
+   display: inline;
+   margin-left:-10px
+}
 
+.img-suffix-suffix {
+   display: inline;
+   margin: 0 0 0 -10px;
+}
 
 
 /* CLOSE BUTTON */
