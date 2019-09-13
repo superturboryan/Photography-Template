@@ -311,7 +311,7 @@ font-size: 60px;
 }
 
 .img-overlay {
-   transition: ease;
+   transition: 0.3s ease-in-out 0.1s;
    position: fixed;
    top:45%;
    left: 400px;

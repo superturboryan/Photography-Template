@@ -80,6 +80,8 @@ window.onscroll = function () {
 
 let imgContainer = document.querySelector(".detail-img-container")
 
+let i = 1
+
 imgContainer.addEventListener('scroll', (e) => {
 
    let offsetX = imgContainer.scrollLeft;
@@ -88,8 +90,10 @@ imgContainer.addEventListener('scroll', (e) => {
 
    let imgOverlay = document.querySelector(".img-overlay")
 
+   // if (i % 2 == 0) 
    imgOverlay.style.left = (offsetX * 1.5) + 300 + "px";
 
+   i++
 }, true)
 
 const revealDetailsView = (imgNumber) => {
