@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
 
 nav {
    position: fixed;
-   top: 0;
+   top: 10px;
    display: flex;
    justify-content: space-between;
    height: 50px;
@@ -95,7 +95,7 @@ nav ul li a img {
 #title {
    position: fixed;
    top:10%;
-   left: 220px;
+   left: 200px;
    font-family: GrotesqueBold, Arial, sans-serif;
    font-size: 330px;
    letter-spacing: -10px;
@@ -107,7 +107,7 @@ nav ul li a img {
 #title-outline{
    position: fixed;
    top:10%;
-   left: 220px;
+   left: 200px;
    font-family: GrotesqueBold, Arial, sans-serif;
    font-size: 330px;
    letter-spacing: -10px;
