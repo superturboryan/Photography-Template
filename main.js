@@ -49,7 +49,12 @@ window.onscroll = function () {
    }
 
    let navTitle = document.querySelector('.nav-title')
-
+   // if (window.pageYOffset > 3) {
+   //    navTitle.classList.add("white-text")
+   // }
+   // if (window.pageYOffset < 3) {
+   //    navTitle.classList.remove("white-text")
+   // }
    // if (window.pageYOffset < 466) {
    //    navTitle.classList.add('opacity-zero')
    //    // console.log("Hiding nav title above first img")
@@ -186,7 +191,17 @@ const unlockScrolling = () => {
    body.classList.remove("overflow-hidden")
 }
 
-// ScrollReveal({ reset: true })
-// ScrollReveal().reveal('img', { delay: 0, duration: 300, easing: 'ease-in-out', reset: true })
+const scrollToBottom = () => {
+   console.log("Scrolling to bottom")
+   unlockScrolling()
+   window.scrollTo({ top: 10000, behavior: 'smooth' })
+   setTimeout(() => {
+      lockScrolling()
+   }, 200)
+}
+
+
+
+
 ScrollReveal().reveal('footer', { delay: 400, duration: 1000, easing: 'ease-in-out', reset: true })
 

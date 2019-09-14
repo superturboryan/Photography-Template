@@ -5,6 +5,7 @@ body {
    text-align: center;
 }
 
+
 main {
    position: relative;
    transition: all 0.3s ease-in-out;
@@ -32,7 +33,7 @@ nav {
 }
 
 .nav-title {
-   margin-top: 22px;
+   margin-top: 28px;
    font-family: GrotesqueLight, Arial, Helvetica, sans-serif;
    font-size: 9.5pt;
    color: white;
@@ -115,8 +116,8 @@ nav ul li a img {
    z-index:1;
    color: black;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(252, 252, 252);
 }
 
 
@@ -218,7 +219,7 @@ footer h3 a:hover {
       width: 600px;
    }
 
-   #nav-title {
+   .nav-title {
       font-size: 34pt;
    }
 
