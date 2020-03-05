@@ -1,4 +1,3 @@
-# Screenshots
 
 ### Homepage
 ![First Screenshot](https://i.imgur.com/pWzlTzI.png)
